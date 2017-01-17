@@ -4,7 +4,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 # Off ninja
-# USE_NINJA=false
+USE_NINJA=false
 
 $(call inherit-product-if-exists, vendor/homtom/ht17_pro/ht17_pro-vendor.mk)
 
