@@ -30,3 +30,6 @@ type protect1_device, dev_type;
 type protect2_device, dev_type;
 type mmc_device, dev_type;
 type mtkbt_device, dev_type;
+
+#For Goodix fingerprint
+type fingerprint_device, dev_type;

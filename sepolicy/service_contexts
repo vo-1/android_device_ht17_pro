@@ -1,6 +1,2 @@
 PQ  u:object_r:pq_service:s0
-fingerprint                               u:object_r:fingerprint_service:s0
-android.hardware.fingerprint.IFingerprintDaemon u:object_r:fingerprintd_service:s0
-gfxinfo                                   u:object_r:gfxinfo_service:s0
-# add for goodix chip
 goodix.fp        u:object_r:gx_fpd_service:s0

@@ -1,2 +1,4 @@
 type pq_service, service_manager_type;
 type guiext-server_service, service_manager_type;
+# added for goodix fp
+type gx_fpd_service, service_manager_type;

@@ -29,7 +29,6 @@
 /system/bin/qmcX983d                                            u:object_r:qmcX983d_exec:s0
 #/system/bin/guiext-server                                       u:object_r:guiext-server_exec:s0
 /system/bin/meizupshelper                                       u:object_r:meizupshelper_exec:s0
-/system/bin/fingerprintd                                        u:object_r:fingerprintd_exec:s0
 
 # Meta mode
 /sbin/multi_init                                                u:object_r:init_exec:s0
@@ -106,9 +105,6 @@
 /dev/block/mmcblk1                                              u:object_r:mmc_device:s0
 /dev/block/zram0                                                u:object_r:swap_block_device:s0
 
-# Fingerprint data
-/data/system/users/[0-9]+/fpdata(/.*)? u:object_r:fingerprintd_data_file:s0
-
 # Sysfs nodes
 /sys/devices/virtual/gpsdrv(/.*)?                               u:object_r:sysfs_gps_file:s0
 /sys/kernel/ccci/boot                                           u:object_r:sysfs_ccci:s0
@@ -131,29 +127,5 @@
 
 /sys/devices/virtual/meizu/ps/ps_calibration                    u:object_r:meizu_ps_calibration_trigger:s0
 
-#For Goodix fingerprint
-/dev/gf66xx-spi     u:object_r:gx_fpd_device:s0
-/dev/ttyACM[0-9]*   u:object_r:gx_fpd_device:s0
-/dev/goodix_fp*     u:object_r:gx_fpd_device:s0
-#For Goodix fingerprint,xielei end
-
-#For Goodix fingerprint,xielei 
-#/system/bin/fingerprintd u:object_r:fingerprintd_exec:s0
-/system/bin/gx_fpd u:object_r:gx_fpd_exec:s0
-#For Goodix fingerprint,xielei end
-
-# Fingerprint data
-#/data/system/users/[0-9]+/fpdata(/.*)? u:object_r:fingerprintd_data_file:s0
-# Goodix Fingerprint data
-/data/system/fingerprint(/.*)? u:object_r:gx_fpd_data_file:s0
-/persist/data/gxfp(/.*)?       u:object_r:gx_fpd_data_file:s0
-
-# Goodix Fingerprint libs
-/system/lib/libfp_client.so      u:object_r:gx_fp_lib_file:s0
-/system/lib/libfpalgorithm.so    u:object_r:gx_fpd_lib_file:s0
-/system/lib/libfpservice.so      u:object_r:gx_fpd_lib_file:s0
-/system/lib/libfphal.so          u:object_r:gx_fpd_lib_file:s0
-/system/lib64/libfp_client.so      u:object_r:gx_fp_lib_file:s0
-/system/lib64/libfpalgorithm.so    u:object_r:gx_fpd_lib_file:s0
-/system/lib64/libfpservice.so      u:object_r:gx_fpd_lib_file:s0
-/system/lib64/libfphal.so          u:object_r:gx_fpd_lib_file:s0
+/system/bin/gx_fpd                  u:object_r:gx_fpd_exec:s0
+/dev/goodix_fp                      u:object_r:fingerprint_device:s0
