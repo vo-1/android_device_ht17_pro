@@ -1364,6 +1364,13 @@ service akmd09911 /system/bin/akmd09911
     user system
     group system
     class main
+
+service af7133d  /system/bin/af7133d
+    disabled
+    user system
+    group system input
+    class main
+
 service bmm050d /system/bin/bmm050d
     disabled
     user system

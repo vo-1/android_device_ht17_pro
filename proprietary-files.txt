@@ -5,6 +5,8 @@ app/YGPS/YGPS.apk
 xbin/mnld
 xbin/BGW
 bin/mtkrildmd2
+bin/af7133d
+bin/gatekeeperd
 bin/xlog
 bin/mtk_setprop
 bin/uiautomator
@@ -60,6 +62,7 @@ bin/ccci_fsd
 bin/s62xd
 bin/gx_fpd
 bin/gx_fpcmd
+lib{,64}/libgatekeeper.so
 lib{,64}/libtinycompress.so
 lib{,64}/libMtkOmxFlacDec.so
 lib{,64}/libcam.camadapter.so

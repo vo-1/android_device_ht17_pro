@@ -341,6 +341,12 @@ on post-fs-data
     start debuggerd
     start debuggerd64
 
+    # fingerprint
+    chown system system  /dev/goodix_fp
+    chmod 0644 /dev/goodix_fp
+    chown system system  /system/bin/gx_fpd
+    chmod 0755 /system/bin/gx_fpd
+
     # Make sure we have the device encryption key.
     start vold
     installkey /data
@@ -700,3 +706,4 @@ service gx_fpd /system/bin/gx_fpd
     class late_start
     user root
     group root system
+seclabel u:r:gx_fpd:s0

@@ -55,6 +55,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.faketouch.xml:system/etc/permissions/android.hardware.faketouch.xml \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
@@ -92,13 +93,16 @@ PRODUCT_PACKAGES += \
     libperfservicenative \
     libcurl
 
-PRODUCT_PACKAGES += tele2pshelper
 
 PRODUCT_PACKAGES += power.mt6735
 
 # Gello
 PRODUCT_PACKAGES += \
     Gello
+
+# Fingerprint
+PRODUCT_PACKAGES += \
+    fingerprintd
 
 # Wifi
 PRODUCT_PACKAGES += \
