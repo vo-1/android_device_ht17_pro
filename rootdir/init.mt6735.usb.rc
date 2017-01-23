@@ -421,8 +421,8 @@ on property:sys.usb.charging=no
 #35.USB BICR configuration(mass_storage)
 on property:sys.usb.config=bicr
     write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 2A45
-    write /sys/class/android_usb/android0/idProduct 0001
+    write /sys/class/android_usb/android0/idVendor ${sys.usb.vid}
+    write /sys/class/android_usb/android0/idProduct 2002
     write /sys/class/android_usb/android0/functions mass_storage
     write /sys/class/android_usb/android0/f_mass_storage/bicr 1
     write /sys/class/android_usb/android0/f_mass_storage/lun/file "/dev/block/loop0"
@@ -433,8 +433,8 @@ on property:sys.usb.config=bicr
 #36.USB BICR configuration(mass_storage+adb)
 on property:sys.usb.config=bicr,adb
     write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 2A45
-    write /sys/class/android_usb/android0/idProduct 0C03
+    write /sys/class/android_usb/android0/idVendor ${sys.usb.vid}
+    write /sys/class/android_usb/android0/idProduct 2003
     write /sys/class/android_usb/android0/functions mass_storage,adb
     write /sys/class/android_usb/android0/f_mass_storage/bicr 1
     write /sys/class/android_usb/android0/f_mass_storage/lun/file "/dev/block/loop0"
