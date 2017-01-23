@@ -12,6 +12,9 @@ diff --git a/media/libstagefright/MediaSource.cpp b/media/libstagefright/MediaSo
 index a17757a..b14f598 100644
 --- a/media/libstagefright/MediaSource.cpp
 +++ b/media/libstagefright/MediaSource.cpp
+@@ -17,1 +17,2 @@ #include <media/stagefright/MediaSource.h>
++#include <inttypes.h>
+
 @@ -23,3 +23,36 @@ MediaSource::MediaSource() {}
  MediaSource::~MediaSource() {}
  
@@ -35,7 +38,7 @@ index a17757a..b14f598 100644
 +    //return _ZNK7android12IMediaSource11ReadOptions9getSeekToEPxPNS1_8SeekModeE(readOptions, time_us, mode);
 +    ALOGW("[Decker] _ZNK7android11MediaSource11ReadOptions9getSeekToEPxPNS1_8SeekModeE");
 +    bool res = readOptions->getSeekTo(time_us, mode);
-+    ALOGW("[Decker] _ZNK7android11MediaSource11ReadOptions9getSeekToEPxPNS1_8SeekModeE %lld, %d, %d", *time_us, *mode, res);
++    ALOGW("[Decker] _ZNK7android11MediaSource11ReadOptions9getSeekToEPxPNS1_8SeekModeE %" PRId64 ", %d, %d", *time_us, *mode, res);
 +    return res;
 +}
 +
@@ -43,7 +46,7 @@ index a17757a..b14f598 100644
 +    //return _ZNK7android12IMediaSource11ReadOptions9getLateByEv(readOptions);
 +    ALOGW("[Decker] _ZNK7android11MediaSource11ReadOptions9getLateByEv");
 +    int64_t res = readOptions->getLateBy();
-+    ALOGW("[Decker] _ZNK7android11MediaSource11ReadOptions9getLateByEv %lld", res);
++    ALOGW("[Decker] _ZNK7android11MediaSource11ReadOptions9getLateByEv %" PRId64 "", res);
 +    return res;
 +}
 +

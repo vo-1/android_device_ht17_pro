@@ -74,11 +74,8 @@
 /dev/radio(/.*)?                                                u:object_r:radio_device:s0
 /dev/fm                                                         u:object_r:fm_device:s0
 /dev/Vcodec                                                     u:object_r:Vcodec_device:s0
-/dev/MAINAF(/.*)? u:object_r:MAINAF_device:s0
-/dev/MAIN2AF(/.*)? u:object_r:MAIN2AF_device:s0
-/dev/SUBAF(/.*)? u:object_r:SUBAF_device:s0
-/dev/DW9714AF(/.*)? u:object_r:DW9714AF_device:s0
-/dev/kd_camera_hw_bus2(/.*)? u:object_r:kd_camera_hw_bus2_device:s0
+/dev/DW9714AF(/.*)?                                             u:object_r:camera_device:s0
+/dev/kd_camera_hw_bus2(/.*)?                                    u:object_r:camera_device:s0
 
 
 # Sockets
@@ -160,4 +157,3 @@
 /system/lib64/libfpalgorithm.so    u:object_r:gx_fpd_lib_file:s0
 /system/lib64/libfpservice.so      u:object_r:gx_fpd_lib_file:s0
 /system/lib64/libfphal.so          u:object_r:gx_fpd_lib_file:s0
-# Fingerprint data
